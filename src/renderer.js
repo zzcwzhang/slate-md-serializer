@@ -2,6 +2,7 @@ import parser from "./parser";
 import { Value } from "slate";
 import { Record } from "immutable";
 import { encode } from "./urls";
+import { escapeMarkdownChars } from "./utils";
 
 const String = new Record({
   object: "string",
@@ -232,7 +233,7 @@ class Markdown {
     let leavesText = leaves.text;
     if (escape) {
       // escape markdown characters
-      leavesText = leavesText.replace(/([\\`*{}\[\]()#+\-.!_>])/gi, "\\$1");
+      leavesText = escapeMarkdownChars(leavesText);
     }
     const string = new String({ text: leavesText });
     const text = this.serializeString(string);
