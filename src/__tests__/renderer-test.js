@@ -112,6 +112,11 @@ test("inserted mark", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("underlined mark", () => {
+  const text = `__underlined text__`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("code mark", () => {
   const text = "`const foo = 123;`";
   expect(getNodes(text)).toMatchSnapshot();

@@ -144,6 +144,8 @@ const RULES = [
           return `++${children}++`;
         case "deleted":
           return `~~${children}~~`;
+        case "underlined":
+          return `__${children}__`;
       }
     }
   }

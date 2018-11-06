@@ -3205,3 +3205,32 @@ Array [
   },
 ]
 `;
+
+exports[`underlined mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "underlined",
+              },
+            ],
+            "object": "leaf",
+            "text": "underlined text",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;

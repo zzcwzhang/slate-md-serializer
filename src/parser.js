@@ -478,7 +478,8 @@ var inline = {
   hashtag: /^(#(?:\[[^\]]+\]|\S+))/,
   reflink: /^!?\[(inside)\]\s*\[([^\]]*)\]/,
   nolink: /^!?\[((?:\[[^\]]*\]|[^\[\]])*)\]/,
-  strong: /^__([\s\S]+?)__(?!_)|^\*\*([\s\S]+?)\*\*(?!\*)/,
+  strong: /^\*\*([\s\S]+?)\*\*(?!\*)/,
+  underlined: /^__([\s\S]+?)__(?!_)/,
   em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
   code: /^(`+)\s*([\s\S]*?[^`])\s*\1(?!`)/,
   br: /^ {2,}\n(?!\s*$)/,
@@ -633,6 +634,13 @@ InlineLexer.prototype.parse = function(src) {
         continue;
       }
       out.push(this.outputLink(cap, link));
+      continue;
+    }
+
+    // underlined
+    if ((cap = this.rules.underlined.exec(src))) {
+      src = src.substring(cap[0].length);
+      out.push(this.renderer.underlined(this.parse(cap[2] || cap[1])));
       continue;
     }
 
@@ -840,6 +848,17 @@ Renderer.prototype.tablecell = function(childNode, flags) {
 };
 
 // span level renderer
+Renderer.prototype.underlined = function(childNode) {
+  return childNode.map(node => {
+    if (node.marks) {
+      node.marks.push({ type: "underlined" });
+    } else {
+      node.marks = [{ type: "underlined" }];
+    }
+    return node;
+  });
+};
+
 Renderer.prototype.strong = function(childNode) {
   return childNode.map(node => {
     if (node.marks) {
