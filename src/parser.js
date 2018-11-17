@@ -1,4 +1,5 @@
 import { decode } from "./urls";
+import generateHashtagRegex from "hashtag-regex";
 
 /**
  * Ported from:
@@ -7,6 +8,12 @@ import { decode } from "./urls";
  *   Use ES6 classes
  *   Add flow annotations
  */
+
+// we need to convert the regex supplied by the dependency to have the
+// entire hashtag contents within a capture group and begin with newline
+const hashtag = new RegExp(
+  generateHashtagRegex().source.replace(/^/, "^(").replace(/$/, ")")
+);
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -475,7 +482,7 @@ Lexer.prototype.token = function(src, top, bq) {
 var inline = {
   escape: /^\\([\\`*{}\[\]()#+\-.!_>])/,
   link: /^!?\[(inside)\]\(href\)/,
-  hashtag: /^(#(?:\[[^\]]+\]|\S+))/,
+  hashtag,
   reflink: /^!?\[(inside)\]\s*\[([^\]]*)\]/,
   nolink: /^!?\[((?:\[[^\]]*\]|[^\[\]])*)\]/,
   strong: /^\*\*([\s\S]+?)\*\*(?!\*)/,

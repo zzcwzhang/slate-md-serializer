@@ -979,6 +979,57 @@ Array [
 ]
 `;
 
+exports[`parses hashtag ignoring dash 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "dash should end ",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "#hashtag",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "inline",
+        "type": "hashtag",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "-dash",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
 exports[`parses heading1 1`] = `
 Array [
   Object {

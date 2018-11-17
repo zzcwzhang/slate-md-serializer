@@ -27,6 +27,10 @@ describe("escapeMarkdownChars", () => {
       "this not a \\# hashtag"
     );
 
+    expect(escapeMarkdownChars("this is a #hashtag-notatag")).toEqual(
+      "this is a #hashtag\\-notatag"
+    );
+
     expect(escapeMarkdownChars("this is a #hashtag")).toEqual(
       "this is a #hashtag"
     );
