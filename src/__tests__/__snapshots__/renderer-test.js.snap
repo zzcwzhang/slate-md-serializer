@@ -738,6 +738,34 @@ function() {
 ]
 `;
 
+exports[`parses \`\`\` code fences with language 1`] = `
+Array [
+  Object {
+    "data": Object {
+      "language": "javascript",
+    },
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "code",
+  },
+]
+`;
+
 exports[`parses ~~~ code fences 1`] = `
 Array [
   Object {

@@ -63,8 +63,10 @@ const RULES = [
           return `| ${children} `;
         case "paragraph":
           return children;
-        case "code":
-          return `\`\`\`\n${children}\n\`\`\``;
+        case "code": {
+          const language = obj.getIn(["data", "language"]) || "";
+          return `\`\`\`${language}\n${children}\n\`\`\``;
+        }
         case "code-line":
           return `${children}\n`;
         case "block-quote":

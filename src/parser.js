@@ -46,7 +46,6 @@ var defaults = {
   pedantic: false,
   smartLists: true,
   silent: false,
-  langPrefix: "lang-",
   renderer: new Renderer()
 };
 
@@ -758,11 +757,11 @@ Renderer.prototype.groupTextInLeaves = function(childNode) {
   }, []);
 };
 
-Renderer.prototype.code = function(childNode, lang) {
+Renderer.prototype.code = function(childNode, language) {
   var data = {};
 
-  if (lang) {
-    data.language = this.options.langPrefix + lang;
+  if (language) {
+    data.language = language;
   }
 
   return {

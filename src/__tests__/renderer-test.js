@@ -318,6 +318,18 @@ function() {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("parses ``` code fences with language", () => {
+  const text = `
+\`\`\`javascript
+const hello = 'world';
+function() {
+  return hello;
+}
+\`\`\`
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("does not escape characters inside of code blocks", () => {
   const text = `
 \`\`\`
