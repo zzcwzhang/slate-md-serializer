@@ -118,18 +118,17 @@ const RULES = [
   },
   {
     serialize(obj, children) {
-      if (obj.object !== "inline") return;
-
-      switch (obj.type) {
-        case "hashtag":
-          return children;
-        case "link":
-          const href = encode(obj.getIn(["data", "href"]) || "");
-          return href ? `[${children.trim()}](${href})` : children.trim();
+      if (obj.type === "hashtag") return children;
+    }
+  },
+  {
+    serialize(obj, children) {
+      if (obj.type === "link") {
+        const href = encode(obj.getIn(["data", "href"]) || "");
+        return href ? `[${children.trim()}](${href})` : children.trim();
       }
     }
   },
-  // Add a new rule that handles marks...
   {
     serialize(obj, children) {
       if (obj.object !== "mark") return;
