@@ -125,7 +125,8 @@ const RULES = [
     serialize(obj, children) {
       if (obj.type === "link") {
         const href = encode(obj.getIn(["data", "href"]) || "");
-        return href ? `[${children.trim()}](${href})` : children.trim();
+        const text = children.trim() || href;
+        return href ? `[${text}](${href})` : text;
       }
     }
   },
@@ -163,7 +164,7 @@ class Markdown {
    * Create a new serializer with `rules`.
    *
    * @param {Object} options
-   *   @property {Array} rules
+   * @property {Array} rules
    * @return {Markdown} serializer
    */
 
