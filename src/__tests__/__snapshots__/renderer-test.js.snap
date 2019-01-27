@@ -2346,14 +2346,22 @@ Array [
     "isVoid": false,
     "nodes": Array [
       Object {
-        "leaves": Array [
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
           Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "this is a quote",
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is a quote",
+              },
+            ],
+            "object": "text",
           },
         ],
-        "object": "text",
+        "object": "block",
+        "type": "paragraph",
       },
     ],
     "object": "block",
@@ -2369,14 +2377,22 @@ Array [
     "isVoid": false,
     "nodes": Array [
       Object {
-        "leaves": Array [
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
           Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "this is a quote",
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is a quote",
+              },
+            ],
+            "object": "text",
           },
         ],
-        "object": "text",
+        "object": "block",
+        "type": "paragraph",
       },
     ],
     "object": "block",
@@ -2395,14 +2411,22 @@ Array [
             "isVoid": false,
             "nodes": Array [
               Object {
-                "leaves": Array [
+                "data": Object {},
+                "isVoid": false,
+                "nodes": Array [
                   Object {
-                    "marks": Array [],
-                    "object": "leaf",
-                    "text": "this is a list item",
+                    "leaves": Array [
+                      Object {
+                        "marks": Array [],
+                        "object": "leaf",
+                        "text": "this is a list item with a quote",
+                      },
+                    ],
+                    "object": "text",
                   },
                 ],
-                "object": "text",
+                "object": "block",
+                "type": "paragraph",
               },
             ],
             "object": "block",
@@ -2415,6 +2439,170 @@ Array [
     ],
     "object": "block",
     "type": "ordered-list",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "data": Object {},
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "leaves": Array [
+                      Object {
+                        "marks": Array [],
+                        "object": "leaf",
+                        "text": "this is a quote with a list item",
+                      },
+                    ],
+                    "object": "text",
+                  },
+                ],
+                "object": "block",
+                "type": "paragraph",
+              },
+            ],
+            "object": "block",
+            "type": "list-item",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "data": Object {},
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "leaves": Array [
+                      Object {
+                        "marks": Array [],
+                        "object": "leaf",
+                        "text": "this is the second list item",
+                      },
+                    ],
+                    "object": "text",
+                  },
+                ],
+                "object": "block",
+                "type": "paragraph",
+              },
+            ],
+            "object": "block",
+            "type": "list-item",
+          },
+        ],
+        "object": "block",
+        "type": "ordered-list",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+]
+`;
+
+exports[`parses quote with newlines and marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is a ",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "object": "mark",
+                    "type": "italic",
+                  },
+                ],
+                "object": "leaf",
+                "text": "quote",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "block",
+        "type": "paragraph",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is the second part of the quote",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "block",
+        "type": "paragraph",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "block",
+        "type": "paragraph",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is the third part of the quote",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "block",
+        "type": "paragraph",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
   },
 ]
 `;
@@ -2989,14 +3177,22 @@ Array [
     "isVoid": false,
     "nodes": Array [
       Object {
-        "leaves": Array [
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
           Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "this is a quote",
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is a quote",
+              },
+            ],
+            "object": "text",
           },
         ],
-        "object": "text",
+        "object": "block",
+        "type": "paragraph",
       },
     ],
     "object": "block",
@@ -3048,14 +3244,22 @@ Array [
     "isVoid": false,
     "nodes": Array [
       Object {
-        "leaves": Array [
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
           Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "this is a quote",
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is a quote",
+              },
+            ],
+            "object": "text",
           },
         ],
-        "object": "text",
+        "object": "block",
+        "type": "paragraph",
       },
     ],
     "object": "block",
@@ -3084,14 +3288,22 @@ Array [
     "isVoid": false,
     "nodes": Array [
       Object {
-        "leaves": Array [
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
           Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "this is a different quote",
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "this is a different quote",
+              },
+            ],
+            "object": "text",
           },
         ],
-        "object": "text",
+        "object": "block",
+        "type": "paragraph",
       },
     ],
     "object": "block",
