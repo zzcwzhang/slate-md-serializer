@@ -808,7 +808,8 @@ Renderer.prototype.hr = function() {
   return {
     object: "block",
     type: "horizontal-rule",
-    isVoid: true
+    isVoid: true,
+    nodes: EMPTY_PARAGRAPH_NODES
   };
 };
 
@@ -981,12 +982,7 @@ Renderer.prototype.image = function(href, title, alt) {
   return {
     object: "block",
     type: "image",
-    nodes: [
-      {
-        object: "text",
-        leaves: [{ text: "" }]
-      }
-    ],
+    nodes: EMPTY_PARAGRAPH_NODES,
     isVoid: true,
     data: data
   };

@@ -1293,7 +1293,18 @@ exports[`parses horizontal rule 1`] = `
 Array [
   Object {
     "data": Object {},
-    "nodes": Array [],
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
     "object": "block",
     "type": "horizontal-rule",
   },
