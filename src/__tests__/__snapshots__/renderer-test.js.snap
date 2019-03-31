@@ -4,7 +4,6 @@ exports[`bold mark 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -33,7 +32,6 @@ exports[`code is not greedy about newlines 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -51,7 +49,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -69,7 +66,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -90,7 +86,6 @@ function() {
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -108,7 +103,6 @@ function() {
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -131,7 +125,6 @@ exports[`code mark 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -160,7 +153,6 @@ exports[`code mark with escaped characters 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -189,7 +181,6 @@ exports[`deleted mark 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -218,7 +209,6 @@ exports[`does not add extra paragraphs around lists 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -236,7 +226,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -254,15 +243,12 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -288,7 +274,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -322,7 +307,6 @@ exports[`handles escaped blocks 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -345,7 +329,6 @@ exports[`handles escaped blocks 2`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -368,7 +351,6 @@ exports[`handles escaped blocks 3`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -391,14 +373,53 @@ exports[`handles escaped marks 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
           Object {
             "marks": Array [],
             "object": "leaf",
-            "text": "this is **not bold**",
+            "text": "this is ",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "*",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "*not bold",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "*",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "*",
           },
         ],
         "object": "text",
@@ -414,14 +435,33 @@ exports[`handles escaped marks 2`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
           Object {
             "marks": Array [],
             "object": "leaf",
-            "text": "this is *not italic*",
+            "text": "this is ",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "*not italic",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "*",
           },
         ],
         "object": "text",
@@ -437,14 +477,53 @@ exports[`handles escaped marks 3`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
           Object {
             "marks": Array [],
             "object": "leaf",
-            "text": "this is [not](a link)",
+            "text": "this is ",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "[not",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "]",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "(a link",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": ")",
           },
         ],
         "object": "text",
@@ -460,14 +539,63 @@ exports[`handles escaped marks 4`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
           Object {
             "marks": Array [],
             "object": "leaf",
-            "text": "this is ![not](an image)",
+            "text": "this is ",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "!",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "[not",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "]",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "(an image",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": ")",
           },
         ],
         "object": "text",
@@ -483,7 +611,6 @@ exports[`headings are not greedy about newlines 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -501,7 +628,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -519,7 +645,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -542,7 +667,6 @@ exports[`ignores empty link 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -565,7 +689,6 @@ exports[`inserted mark 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -594,7 +717,6 @@ exports[`italic mark 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -639,7 +761,6 @@ exports[`maintains multiple empty paragraphs 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -657,7 +778,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -675,7 +795,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -693,7 +812,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -716,7 +834,6 @@ exports[`parses \`\`\` code fences 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -744,7 +861,6 @@ Array [
     "data": Object {
       "language": "javascript",
     },
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -770,7 +886,6 @@ exports[`parses ~~~ code fences 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -796,17 +911,14 @@ exports[`parses double nested todo list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {
           "checked": true,
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -824,17 +936,14 @@ Array [
           },
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "data": Object {
                   "checked": false,
                 },
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "data": Object {},
-                    "isVoid": false,
                     "nodes": Array [
                       Object {
                         "leaves": Array [
@@ -858,11 +967,9 @@ Array [
                 "data": Object {
                   "checked": true,
                 },
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "data": Object {},
-                    "isVoid": false,
                     "nodes": Array [
                       Object {
                         "leaves": Array [
@@ -896,17 +1003,14 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {
           "checked": false,
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -937,7 +1041,6 @@ exports[`parses empty string 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -960,7 +1063,6 @@ exports[`parses hashtag 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -974,7 +1076,6 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -1011,7 +1112,6 @@ exports[`parses hashtag ignoring dash 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1025,7 +1125,6 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -1062,7 +1161,6 @@ exports[`parses heading1 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1085,7 +1183,6 @@ exports[`parses heading2 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1108,7 +1205,6 @@ exports[`parses heading3 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1131,7 +1227,6 @@ exports[`parses heading4 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1154,7 +1249,6 @@ exports[`parses heading5 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1177,7 +1271,6 @@ exports[`parses heading6 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1200,25 +1293,12 @@ exports[`parses horizontal rule 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": true,
-    "nodes": Array [
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
-    ],
+    "nodes": Array [],
     "object": "block",
     "type": "horizontal-rule",
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1236,7 +1316,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1259,14 +1338,12 @@ exports[`parses image 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {
           "alt": "example",
           "src": "http://example.com/logo.png",
         },
-        "isVoid": true,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -1293,7 +1370,6 @@ exports[`parses indented code blocks 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1319,15 +1395,12 @@ exports[`parses indented list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1349,11 +1422,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1384,23 +1455,11 @@ exports[`parses link 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
       Object {
         "data": Object {
           "href": "http://google.com",
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -1415,16 +1474,6 @@ Array [
         ],
         "object": "inline",
         "type": "link",
-      },
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
       },
     ],
     "object": "block",
@@ -1437,23 +1486,11 @@ exports[`parses link with encoded characters 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
       Object {
         "data": Object {
           "href": "https://example.com/app/kibana#/discover?_g=(refreshInterval:('$$hashKey':'object:1596',display:'10 seconds',pause:!f,section:1,value:10000),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url),index:'logs-',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'metadata.at: Stepper*')),sort:!(time,desc))",
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -1468,16 +1505,6 @@ Array [
         ],
         "object": "inline",
         "type": "link",
-      },
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
       },
     ],
     "object": "block",
@@ -1490,23 +1517,11 @@ exports[`parses link with percent symbol 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
       Object {
         "data": Object {
           "href": "https://example.com/app/kibana#/visualize/edit/Requests-%25",
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -1522,16 +1537,6 @@ Array [
         "object": "inline",
         "type": "link",
       },
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
     ],
     "object": "block",
     "type": "paragraph",
@@ -1543,23 +1548,11 @@ exports[`parses link within mark 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
       Object {
         "data": Object {
           "href": "http://google.com",
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -1575,16 +1568,6 @@ Array [
         "object": "inline",
         "type": "link",
       },
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
     ],
     "object": "block",
     "type": "paragraph",
@@ -1596,15 +1579,12 @@ exports[`parses list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1626,11 +1606,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1661,15 +1639,12 @@ exports[`parses list items with marks 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1702,11 +1677,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1748,15 +1721,12 @@ exports[`parses mixed list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1782,15 +1752,12 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1816,15 +1783,12 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1855,15 +1819,12 @@ exports[`parses nested list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1885,11 +1846,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -1907,15 +1866,12 @@ Array [
           },
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "data": Object {},
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "data": Object {},
-                    "isVoid": false,
                     "nodes": Array [
                       Object {
                         "leaves": Array [
@@ -1949,7 +1905,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -1972,17 +1927,14 @@ exports[`parses nested todo list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {
           "checked": false,
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2000,17 +1952,14 @@ Array [
           },
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "data": Object {
                   "checked": false,
                 },
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "data": Object {},
-                    "isVoid": false,
                     "nodes": Array [
                       Object {
                         "leaves": Array [
@@ -2034,11 +1983,9 @@ Array [
                 "data": Object {
                   "checked": false,
                 },
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "data": Object {},
-                    "isVoid": false,
                     "nodes": Array [
                       Object {
                         "leaves": Array [
@@ -2077,15 +2024,12 @@ exports[`parses ordered list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2107,11 +2051,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2142,15 +2084,12 @@ exports[`parses ordered list items with different numbers 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2172,11 +2111,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2198,11 +2135,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2233,15 +2168,12 @@ exports[`parses ordered list items with marks 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2274,11 +2206,9 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2320,7 +2250,6 @@ exports[`parses paragraph 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -2343,11 +2272,9 @@ exports[`parses quote 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -2374,11 +2301,9 @@ exports[`parses quote followed by list with quote (outline/#723) 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -2400,19 +2325,15 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "data": Object {},
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "leaves": Array [
@@ -2442,19 +2363,15 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "data": Object {},
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "leaves": Array [
@@ -2476,11 +2393,9 @@ Array [
           },
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "data": Object {},
-                "isVoid": false,
                 "nodes": Array [
                   Object {
                     "leaves": Array [
@@ -2515,11 +2430,9 @@ exports[`parses quote with newlines and marks 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -2548,7 +2461,6 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -2566,7 +2478,6 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -2584,7 +2495,6 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -2611,17 +2521,14 @@ exports[`parses tables 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2641,7 +2548,6 @@ Array [
             "data": Object {
               "align": "center",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2661,7 +2567,6 @@ Array [
             "data": Object {
               "align": "right",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2683,13 +2588,11 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2709,14 +2612,23 @@ Array [
             "data": Object {
               "align": "center",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
                   Object {
                     "marks": Array [],
                     "object": "leaf",
-                    "text": "left-aligned",
+                    "text": "left",
+                  },
+                ],
+                "object": "text",
+              },
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "-aligned",
                   },
                 ],
                 "object": "text",
@@ -2729,7 +2641,6 @@ Array [
             "data": Object {
               "align": "right",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2751,13 +2662,11 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2777,7 +2686,6 @@ Array [
             "data": Object {
               "align": "center",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2797,7 +2705,6 @@ Array [
             "data": Object {
               "align": "right",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2819,13 +2726,11 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2845,14 +2750,23 @@ Array [
             "data": Object {
               "align": "center",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
                   Object {
                     "marks": Array [],
                     "object": "leaf",
-                    "text": "right-aligned",
+                    "text": "right",
+                  },
+                ],
+                "object": "text",
+              },
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "-aligned",
                   },
                 ],
                 "object": "text",
@@ -2865,7 +2779,6 @@ Array [
             "data": Object {
               "align": "right",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2896,17 +2809,14 @@ exports[`parses todo list items 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {
           "checked": false,
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2930,11 +2840,9 @@ Array [
         "data": Object {
           "checked": true,
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -2965,17 +2873,14 @@ exports[`parses todo list items with marks 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {
           "checked": true,
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -3005,11 +2910,9 @@ Array [
         "data": Object {
           "checked": true,
         },
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {},
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -3051,7 +2954,6 @@ exports[`parses two paragraphs 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3069,7 +2971,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3092,7 +2993,6 @@ exports[`parses two paragraphs 2`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3110,7 +3010,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3128,7 +3027,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3151,7 +3049,6 @@ exports[`parses whitespace string 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3174,11 +3071,9 @@ exports[`quote is not greedy about newlines 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -3200,7 +3095,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3218,7 +3112,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3241,11 +3134,9 @@ exports[`quotes do not get combined 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -3267,7 +3158,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3285,11 +3175,9 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "leaves": Array [
@@ -3316,17 +3204,14 @@ exports[`tables are not greedy about newlines 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -3346,7 +3231,6 @@ Array [
             "data": Object {
               "align": "center",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -3366,7 +3250,6 @@ Array [
             "data": Object {
               "align": "right",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -3388,13 +3271,11 @@ Array [
       },
       Object {
         "data": Object {},
-        "isVoid": false,
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -3414,14 +3295,23 @@ Array [
             "data": Object {
               "align": "center",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
                   Object {
                     "marks": Array [],
                     "object": "leaf",
-                    "text": "left-aligned",
+                    "text": "left",
+                  },
+                ],
+                "object": "text",
+              },
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "-aligned",
                   },
                 ],
                 "object": "text",
@@ -3434,7 +3324,6 @@ Array [
             "data": Object {
               "align": "right",
             },
-            "isVoid": false,
             "nodes": Array [
               Object {
                 "leaves": Array [
@@ -3460,7 +3349,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3478,7 +3366,6 @@ Array [
   },
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [
@@ -3501,7 +3388,6 @@ exports[`underlined mark 1`] = `
 Array [
   Object {
     "data": Object {},
-    "isVoid": false,
     "nodes": Array [
       Object {
         "leaves": Array [

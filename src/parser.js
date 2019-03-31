@@ -15,6 +15,19 @@ const hashtag = new RegExp(
   generateHashtagRegex().source.replace(/^/, "^(").replace(/$/, ")")
 );
 
+const EMPTY_PARAGRAPH_NODES = [
+  {
+    object: "text",
+    leaves: [
+      {
+        object: "leaf",
+        text: "",
+        marks: []
+      }
+    ]
+  }
+];
+
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
 const assign =
@@ -730,7 +743,7 @@ function Renderer(options) {
 
 Renderer.prototype.groupTextInLeaves = function(childNode) {
   let node = flatten(childNode);
-  return node.reduce((acc, current) => {
+  const output = node.reduce((acc, current) => {
     let accLast = acc.length - 1;
     let lastIsText =
       accLast >= 0 && acc[accLast] && acc[accLast]["object"] === "text";
@@ -755,6 +768,9 @@ Renderer.prototype.groupTextInLeaves = function(childNode) {
       return acc;
     }
   }, []);
+
+  if (!output.length) return EMPTY_PARAGRAPH_NODES;
+  return output;
 };
 
 Renderer.prototype.code = function(childNode, language) {
@@ -1194,18 +1210,7 @@ const MarkdownParser = {
             type: "paragraph",
             isVoid: false,
             data: {},
-            nodes: [
-              {
-                object: "text",
-                leaves: [
-                  {
-                    object: "leaf",
-                    text: "",
-                    marks: []
-                  }
-                ]
-              }
-            ]
+            nodes: EMPTY_PARAGRAPH_NODES
           }
         ];
       }

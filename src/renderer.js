@@ -71,7 +71,7 @@ const RULES = [
           return `${children}\n`;
         case "block-quote":
           // Handle multi-line blockquotes
-          return children.split('\n').map((text) => `> ${text}`).join('\n');
+          return children.split("\n").map(text => `> ${text}`).join("\n");
         case "todo-list":
         case "bulleted-list":
         case "ordered-list": {
@@ -218,13 +218,18 @@ class Markdown {
       });
     }
 
-    const children = node.nodes.map((childNode) => {
-      const serialized = this.serializeNode(childNode, document);
-      return ((serialized && serialized.join) ? serialized.join("") : serialized) || "";
-    }).join(
-      // Special case for blockquotes, children in blockquotes are separated by new lines
-      node.type === "block-quote" ? "\n" : ""
-    );
+    const children = node.nodes
+      .map(childNode => {
+        const serialized = this.serializeNode(childNode, document);
+        return (
+          (serialized && serialized.join ? serialized.join("") : serialized) ||
+          ""
+        );
+      })
+      .join(
+        // Special case for blockquotes, children in blockquotes are separated by new lines
+        node.type === "block-quote" ? "\n" : ""
+      );
 
     for (const rule of this.rules) {
       if (!rule.serialize) continue;
@@ -281,8 +286,7 @@ class Markdown {
    */
   deserialize(markdown) {
     const document = parser.parse(markdown);
-    const state = Value.fromJSON({ document });
-    return state;
+    return Value.fromJSON({ document });
   }
 }
 
