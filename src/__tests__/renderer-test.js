@@ -92,6 +92,22 @@ a paragraph
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("horizontal rule does not make text above a heading", () => {
+  const text = `
+not a heading
+---
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("horizontal rule does not make text above a heading", () => {
+  const text = `
+not a heading
+===
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("bold mark", () => {
   const text = `**this is bold**`;
   expect(getNodes(text)).toMatchSnapshot();

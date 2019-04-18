@@ -73,11 +73,10 @@ var block = {
   hr: /^( *[-*_]){3,} *(?:\n|$)/,
   heading: /^ *(#{1,6}) *([^\n]+?) *#* *(?:\n|$)/,
   nptable: noop,
-  lheading: /^([^\n]+)\n *(=|-){2,} *(?:\n|$)/,
   blockquote: /^( *>[^\n]+(\n(?!def)[^\n])*(?:\n|$))+/,
   list: /^( *)(bull) [\s\S]+?(?:hr|def|\n(?! )(?!\1bull )\n|\s*$)/,
   def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n|$)/,
-  paragraph: /^((?:[^\n]+(?!hr|heading|lheading|blockquote|def))+)(?:\n|$)/,
+  paragraph: /^((?:[^\n]+(?!hr|heading|blockquote|def))+)(?:\n|$)/,
   text: /^[^\n]+/
 };
 
@@ -95,10 +94,7 @@ block.blockquote = replace(block.blockquote)("def", block.def)();
 block.paragraph = replace(block.paragraph)("hr", block.hr)(
   "heading",
   block.heading
-)("lheading", block.lheading)("blockquote", block.blockquote)(
-  "def",
-  block.def
-)();
+)("blockquote", block.blockquote)("def", block.def)();
 
 /**
  * Normal Block Grammar
@@ -284,17 +280,6 @@ Lexer.prototype.token = function(src, top, bq) {
 
       this.tokens.push(item);
 
-      continue;
-    }
-
-    // lheading
-    if ((cap = this.rules.lheading.exec(src))) {
-      src = src.substring(cap[0].length);
-      this.tokens.push({
-        type: "heading",
-        depth: cap[2] === "=" ? 1 : 2,
-        text: cap[1]
-      });
       continue;
     }
 

@@ -663,6 +663,84 @@ Array [
 ]
 `;
 
+exports[`horizontal rule does not make text above a heading 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "not a heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "horizontal-rule",
+  },
+]
+`;
+
+exports[`horizontal rule does not make text above a heading 2`] = `
+Array [
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "not a heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "===",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
 exports[`ignores empty link 1`] = `
 Array [
   Object {
