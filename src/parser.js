@@ -850,7 +850,7 @@ Renderer.prototype.tablecell = function(childNode, flags) {
   return {
     object: "block",
     data: { align },
-    type: flags.header ? "table-head" : "table-cell",
+    type: "table-cell",
     nodes: this.groupTextInLeaves(childNode)
   };
 };

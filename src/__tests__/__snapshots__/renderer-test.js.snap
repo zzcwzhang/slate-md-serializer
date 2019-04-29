@@ -2631,7 +2631,7 @@ Array [
               },
             ],
             "object": "block",
-            "type": "table-head",
+            "type": "table-cell",
           },
           Object {
             "data": Object {
@@ -2650,7 +2650,7 @@ Array [
               },
             ],
             "object": "block",
-            "type": "table-head",
+            "type": "table-cell",
           },
           Object {
             "data": Object {
@@ -2669,7 +2669,7 @@ Array [
               },
             ],
             "object": "block",
-            "type": "table-head",
+            "type": "table-cell",
           },
         ],
         "object": "block",
@@ -3314,7 +3314,7 @@ Array [
               },
             ],
             "object": "block",
-            "type": "table-head",
+            "type": "table-cell",
           },
           Object {
             "data": Object {
@@ -3333,7 +3333,7 @@ Array [
               },
             ],
             "object": "block",
-            "type": "table-head",
+            "type": "table-cell",
           },
           Object {
             "data": Object {
@@ -3352,7 +3352,7 @@ Array [
               },
             ],
             "object": "block",
-            "type": "table-head",
+            "type": "table-cell",
           },
         ],
         "object": "block",
