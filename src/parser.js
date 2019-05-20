@@ -1073,8 +1073,14 @@ Parser.prototype.tok = function() {
       );
     }
     case "code": {
+      // Text inside of code blocks should not be parsed for marks
       return this.renderer.code(
-        this.inline.parse(this.token.text),
+        [
+          {
+            object: "text",
+            leaves: [{ text: this.token.text }]
+          }
+        ],
         this.token.lang
       );
     }

@@ -373,6 +373,26 @@ function() {
   expect(rendered).toMatchSnapshot();
 });
 
+test("does not parse marks inside of code blocks", () => {
+  const text = `
+\`\`\`
+This is *not* bold, how about __this__
+\`\`\`
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("does not parse marks around code block boundaries", () => {
+  const text = `
+\`\`\`
+This is *not
+\`\`\`
+
+hello \* bold
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("code is not greedy about newlines", () => {
   const text = `
 one sentance

@@ -303,6 +303,94 @@ function() {
 
 exports[`does not escape characters inside of code marks 1`] = `"\`<script>alert('foo')</script>\`"`;
 
+exports[`does not parse marks around code block boundaries 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is *not",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "code",
+  },
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "hello ",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "* bold",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`does not parse marks inside of code blocks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is *not* bold, how about __this__",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "code",
+  },
+]
+`;
+
 exports[`handles escaped blocks 1`] = `
 Array [
   Object {
