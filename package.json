@@ -1,5 +1,5 @@
 {
-  "name": "slate-md-serializer",
+  "name": "slate-md-serializer-without-code",
   "version": "5.3.3",
   "description": "",
   "main": "lib/renderer.js",
