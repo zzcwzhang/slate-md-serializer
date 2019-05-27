@@ -212,27 +212,27 @@ Lexer.prototype.token = function(src, top, bq) {
       }
     }
 
-    // code
-    if ((cap = this.rules.code.exec(src))) {
-      src = src.substring(cap[0].length);
-      cap = cap[0].replace(/^ {4}/gm, "");
-      this.tokens.push({
-        type: "code",
-        text: !this.options.pedantic ? cap.replace(/\n+$/, "") : cap
-      });
-      continue;
-    }
+    /* // code */
+    /* if ((cap = this.rules.code.exec(src))) { */
+    /*   src = src.substring(cap[0].length); */
+    /*   cap = cap[0].replace(/^ {4}/gm, ""); */
+    /*   this.tokens.push({ */
+    /*     type: "code", */
+    /*     text: !this.options.pedantic ? cap.replace(/\n+$/, "") : cap */
+    /*   }); */
+    /*   continue; */
+    /* } */
 
-    // fences (gfm)
-    if ((cap = this.rules.fences.exec(src))) {
-      src = src.substring(cap[0].length);
-      this.tokens.push({
-        type: "code",
-        lang: cap[2],
-        text: cap[3]
-      });
-      continue;
-    }
+    /* // fences (gfm) */
+    /* if ((cap = this.rules.fences.exec(src))) { */
+    /*   src = src.substring(cap[0].length); */
+    /*   this.tokens.push({ */
+    /*     type: "code", */
+    /*     lang: cap[2], */
+    /*     text: cap[3] */
+    /*   }); */
+    /*   continue; */
+    /* } */
 
     // heading
     if ((cap = this.rules.heading.exec(src))) {

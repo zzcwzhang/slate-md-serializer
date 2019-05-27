@@ -9,11 +9,11 @@
     "lint": "eslint src --fix",
     "test": "jest"
   },
-  "author": "",
+  "author": "zhangyuan",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tommoor/slate-md-serializer.git"
+    "url": "git://github.com/zhangyuan/slate-md-serializer.git"
   },
   "peerDependencies": {
     "immutable": ">=3.0.0",
